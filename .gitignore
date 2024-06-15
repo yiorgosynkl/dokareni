@@ -1,2 +1,4 @@
 fifths_charts/
 wheel_charts/
+__pycache__/
+venv/

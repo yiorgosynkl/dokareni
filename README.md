@@ -5,9 +5,22 @@ Dokareni is a system to express and comprehend music, to communicate musical ide
 ## code in this project
 
 About the python programs:
-* `dokareni_test` and `dokareni_test2` are great for practicing intervals in dokareni system. `dokareni_base` contains the main notes to compose a randomised practice with the intervals.
+* `dokareni_test.py` and `dokareni_test2.py` are great for practicing intervals in dokareni system. `dokareni_base.py` contains the main notes to compose a randomised practice with the intervals.
 * `dkrn_chrats_5ths.py` and `dkrn_chrats_wheel.py` produce diagrams with colors for the dokareni notes.
-* 
+
+```
+# running a script
+source venv/bin/activate
+python3 -m pip install -r requirements.txt
+python3 dokareni_test.py 
+deactivate
+
+# creating virtual env, installing dependencies
+virtualenv venv 
+source venv/bin/activate
+python3 -m pip install <pip-package>
+pip freeze > requirements.txt 
+```
 
 ## reasoning behind developing the notation system
 
