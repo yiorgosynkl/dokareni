@@ -98,3 +98,115 @@ There is the concept of movable do and fixed do. Similarly in dokareni, we can c
 
 In order to enhance comprehension, I usually use fixed do to refer to notes (thus every key on the piano gets a fixed name). However, I color the notes differently (with tonic for each song getting the same color).
 The colors are equally spaced in the RGB coloring, and I have the hexadecimal encoding in the table above.
+
+## learning about chords / modes in dokareni
+
+```
+# major(0,4,7).   minor(0,3,7).  augmented(0,4,8).   diminished(0,3,6).
+
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+dms.       dns.       dmp.       dnz.
+
+```
+
+
+```
+# ionian/major (C-mode) (do-mode)
+0   2   4   5   7   9   11  0    # semitones
+  T   T   S   T   T   T   S      # semitone diffs
+
+R   2   3   4   5   6   7   R    # jazz writing
+C   D   E   F   G   A   B   C    # starting from C 
+C   D   E   F   G   A   B   C    # playing only naturals (white keys)
+
+do  re  mo  fa  si  la  ti  do   # starting from do
+do  re  mo  fa  si  la  ti  do   # playing only naturals (white keys)
+
+
+
+# dorian (D-mode) (re-mode)
+0   2   3   5   7   9   10  0    # semitones
+  T   S   T   T   T   S   T      # semitone diffs
+
+R   2   3b  4   5   6   7b  R    # jazz writing
+C   D   Eb  F   G   A   Bb  C    # starting from C 
+D   E   F   G   A   B   C   D    # playing only naturals (white keys)
+
+do  re  ni  fa  si  la  ve  do   # starting from do
+re  mo  fa  si  la  ti  do  re   # playing only naturals (white keys)
+
+
+
+# phrygian (E-mode) (mo-mode)
+0   1   3   5   7   8   10  0    # semitones
+  S   T   T   T   S   T   T      # semitone diffs
+
+R   2b  3b  4   5   6b  7b  R    # jazz writing
+C   Db  Eb  F   G   Ab  Bb  C    # starting from C 
+E   F   G   A   B   C   D   E    # playing only naturals (white keys)
+
+do  ka  ni  fa  si  po  ve  do   # starting from do
+mo  fa  si  la  ti  do  re  re   # playing only naturals (white keys)
+
+
+
+# lydian (F-mode) (fa-mode)
+0   2   4   6   7   9   11  0    # semitones
+  T   T   T   S   T   T   S      # semitone diffs
+
+R   2   3   4#  5   6   7   R    # jazz writing
+C   D   E   F#  G   A   B   C    # starting from C 
+F   G   A   B   C   D   E   F    # playing only naturals (white keys)
+
+do  re  mo  ze  si  la  ti  do   # starting from do
+fa  si  la  ti  do  re  mo  fa   # playing only naturals (white keys)
+
+
+
+# mixolydian (G-mode) (si-mode) (dominant 7th chord)
+0   2   4   5   7   9   10  0    # semitones
+  T   T   S   T   T   S   T      # semitone diffs
+
+R   2   3   4   5   6   7b  R    # jazz writing
+C   D   E   F   G   A   Bb  C    # starting from C 
+G   A   B   C   D   E   F   G    # playing only naturals (white keys)
+
+do  re  mo  fa  si  la  ve  do   # starting from do
+si  la  ti  do  re  mo  fa  si   # playing only naturals (white keys)
+
+
+
+# aeolian/minor (A-mode) (la-mode)
+0   2   3   5   7   8   10  0    # semitones
+  T   S   T   T   S   T   T      # semitone diffs
+
+R   2   3b  4   5   6b  7b  R    # jazz writing
+C   D   Eb  F   G   Ab  Bb  C    # starting from C 
+A   B   C   D   E   F   G   A    # playing only naturals (white keys)
+
+do  re  ni  fa  si  po  ve  do   # starting from do
+la  ti  do  re  mo  fa  si  la   # playing only naturals (white keys)
+
+
+
+# locrian (B-mode) (ti-mode)
+0   1   3   5   6   8   10  0    # semitones
+  S   T   T   S   T   T   T      # semitone diffs
+
+R   2b  3b  4   5b  6b  7b  R    # jazz writing
+C   Db  Eb  F   Gb  Ab  Bb  C    # starting from C 
+B   C   D   E   F   G   A   B    # playing only naturals (white keys)
+
+do  ka  ni  fa  ze  po  ve  do   # starting from do
+ti  do  re  mo  fa  si  la  ti   # playing only naturals (white keys)
+
+```
