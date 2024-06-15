@@ -2,6 +2,13 @@
 
 Dokareni is a system to express and comprehend music, to communicate musical ideas and patterns, specifically in pitch changes. 
 
+## code in this project
+
+About the python programs:
+* `dokareni_test` and `dokareni_test2` are great for practicing intervals in dokareni system. `dokareni_base` contains the main notes to compose a randomised practice with the intervals.
+* `dkrn_chrats_5ths.py` and `dkrn_chrats_wheel.py` produce diagrams with colors for the dokareni notes.
+* 
+
 ## reasoning behind developing the notation system
 
 In modern times, musical instruments use a 12-note system (there is kind of a natural explanation on why 12 are enough). However, people express music in terms of english letters or music sheets, making it kind of inaccessible to understand. Common problems with the current system is that:
@@ -102,6 +109,7 @@ The colors are equally spaced in the RGB coloring, and I have the hexadecimal en
 ## learning about chords / modes in dokareni
 
 ```
+TODO
 # major(0,4,7).   minor(0,3,7).  augmented(0,4,8).   diminished(0,3,6).
 
 dms.       dns.       dmp.       dnz.
