@@ -43,13 +43,8 @@ def check(root_note, drct, guess_intr, ans = []):
 
 while True:
     root_note, drct = get_random()
-    # guess_intr = [4,8]
-    # guess_intr = [1,2]
-    # guess_intr = [1]
-    # guess_intr = [2]
     # guess_intr = [1,2,3]
-    # guess_intr = get_random_intervals([2,4,6,8,10])
-    guess_intr = get_random_intervals()
+    guess_intr = get_random_intervals([1,2,3,4,5,6,7,8,9,10,11], keep=2)
     try:
         print(f" {pnote(root_note)} {drct} {guess_intr}: ", end="", flush=True)
         play_note(root_note)

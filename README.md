@@ -12,6 +12,8 @@ Dokareni is a system to express and comprehend music, to communicate musical ide
 
 ![dokareni_test](./assets/dokareni_test.gif)
 
+![dokareni_test_2](./assets/dokareni_test_2.gif)
+
 ### how to run
 ```
 # running a script
