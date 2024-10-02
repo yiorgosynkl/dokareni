@@ -1,13 +1,18 @@
-# dokareni
+# :musical_score: dokareni
 
 Dokareni is a system to express and comprehend music, to communicate musical ideas and patterns, specifically in pitch changes. 
 
 ## code in this project
 
-About the python programs:
+### About the python programs
 * `dokareni_test.py` and `dokareni_test2.py` are great for practicing intervals in dokareni system. `dokareni_base.py` contains the main notes to compose a randomised practice with the intervals.
 * `dkrn_chrats_5ths.py` and `dkrn_chrats_wheel.py` produce diagrams with colors for the dokareni notes.
 
+### :movie_camera: Program gifs
+
+![dokareni_test](./assets/dokareni_test.gif)
+
+### how to run
 ```
 # running a script
 source venv/bin/activate
