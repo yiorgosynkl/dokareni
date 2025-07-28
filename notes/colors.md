@@ -533,7 +533,30 @@ there are three digits. A is the initial ace. L is the lucky zero (it's left or 
 #ff80ff (212)
 #ff0080 (201)
 ```
-> this is one of the most complex but also one of my favourites
+* this is equivelant to darkening the pure colors (red, green, blue) and completing more the secondary colors (yellow, cyan, magenta)
+* it's a preety interesting combo, I'm proud
+
+
+
+What if I unsaturate the (red,green,blue) and saturate the (yellow,cyan, magenta)
+
+(80 lowers to 55 or increase to aa)
+```
+#aa0000 (100) (red) (increased)
+#ff8000 (210)
+#aaaa55 (221) (yellow) (decreased)
+#80ff00 (120)
+#00aa00 (010) (green) (increased)
+#00ff80 (021)
+#55aaaa (122) (cyan) (decreased)
+#0080ff (012)
+#0000aa (001) (blue) (increased)
+#8000ff (102)
+#aa55aa (212) (magenta) (decreased)
+#ff0080 (201)
+```
+> this is even better for they eye, while still keeping the relevance with the original names
+
 
 Combine colors in 4 levels? (`4*4*4=64` choices - 4 neutrals)
 ```
