@@ -542,9 +542,9 @@ What if I unsaturate the (red,green,blue) and saturate the (yellow,cyan, magenta
 
 (80 lowers to 55 or increase to aa)
 ```
-#aa0000 (100) (red) (increased)
+#bb0000 (100) (red) (increased)
 #ff8000 (210)
-#aaaa55 (221) (yellow) (decreased)
+#cccc44 (221) (yellow) (decreased)
 #80ff00 (120)
 #00aa00 (010) (green) (increased)
 #00ff80 (021)
@@ -557,6 +557,20 @@ What if I unsaturate the (red,green,blue) and saturate the (yellow,cyan, magenta
 ```
 > this is even better for they eye, while still keeping the relevance with the original names
 
+```
+#aa0000 (100) (red) (increased)
+#ff8000 (210) (orange)
+#cccc44 (221) (yellow) (decreased)
+#80ff00 (120) (chart)
+#00aa00 (010) (green) (increased)
+#00ff80 (021) (spring)
+#44cccc (122) (cyan) (decreased)
+#0080ff (012) (azure)
+#0000aa (001) (blue) (increased)
+#8000ff (102) (violet)
+#cc44cc (212) (magenta) (decreased)
+#ff0080 (201) (rose)
+```
 
 Combine colors in 4 levels? (`4*4*4=64` choices - 4 neutrals)
 ```
