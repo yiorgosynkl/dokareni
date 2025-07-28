@@ -226,9 +226,14 @@ Using 4 neutral colors and 12 colors with different hues, saturations (`[("Black
 
 * [K. Kelly (1965): Twenty-two colors of maximum contrast]()
 
-* [A Colour Alphabet and the Limits of Colour Coding](https://cdn.wildapricot.com/255957/resources/Documents/jaic_v5_06.pdf?version=1528257112000&Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLndpbGRhcHJpY290LmNvbS8yNTU5NTcvcmVzb3VyY2VzL0RvY3VtZW50cy9qYWljX3Y1XzA2LnBkZj92ZXJzaW9uPTE1MjgyNTcxMTIwMDAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3NTM2NDU5NTJ9LCJJcEFkZHJlc3MiOnsiQVdTOlNvdXJjZUlwIjoiMC4wLjAuMC8wIn19fV19&Signature=bXULVlk17eL9rbpCkaoskw4tyNFFvEuj11SzNiG7ShXioQphUV5KydKEjK8jrNBsUDhrhEgkhAUdEyioVCLO1nWTHURy0a~BDpEe8QZj3fXloOmUi5S5Q4Oje2DmtQ~YKMxCfnnQ~J7ETkNbmaa6Va0FRfwzMxe6JZATzxAR0bS9VJuKxkMQ0Z-OLQXmftjzXpMOQ8DnZ4QZ0hsk8Zfheepe6Q6shORhjldelRNutSOrZWXcGX1p6JKQ9U8952JF3tzdoofeDjgLM7pRmUWY8EsdYbCHHk-iYK-WRIvNzbnVPHSEBFDD5jV4UESY4EgcF6HAIB5TMJpgDASgWhAOjA__&Key-Pair-Id=K27MGQSHTHAGGF)
+* [A Colour Alphabet and the Limits of Colour Coding]()
 
 * [List of 20 Simple, Distinct Colors](https://sashamaps.net/docs/resources/20-colors/)
+
+* [tableu colors](https://jrnold.github.io/ggthemes/reference/tableau_color_pal.html)
+    * subset of classic 20
+    * classic traffic light
+    * classic cyclical
 
 * [ColorBrewer](https://colorbrewer2.org/#type=qualitative&scheme=Paired&n=12)
 The first 12-class qualitative
@@ -330,3 +335,263 @@ What if I alternate with deeper (lower v) colors:
 #bf00bf (MAGENTA) | hsl(300, 0.5, 0.75) 
 #FF0080 (ROSE) | hsl(360, 0.5, 1.0) 
 ```
+
+What if we make more steps between red and green (and less later on?). Kind of combine RYB and RGB.
+Equally separated values.
+00 - 56 - aa - ff
+```
+#ff0000
+#ff5600
+#ffaa00
+#ffff00
+#aaff00
+#56ff00
+#00ff00
+#00ff56
+#00ffaa
+#00ffff
+#00aaff
+#0056ff
+#0000ff
+#5600ff
+#aa00ff
+#ff00ff
+#ff00aa
+#ff0056
+#ff0000
+```
+
+Now using that, we just skip some values:
+```
+#ff0000 do
+#ff5600 ka
+#ffaa00 re
+#ffff00 ni
+#00ff00 mo
+#00ffff fa
+#0080ff ze
+#0000ff si
+#8000ff po
+#ff00ff la
+#ff00aa ve
+#ff0056 ti
+#ff0000 do
+```
+
+Green is too powerful, so drop it's power to maximum aa (not ff). Therefore the rest of the colors will take charge.
+That means (red and blue: `00-80-ff` and green: `00-56-aa`, which is 2/3 of the maximum)
+```
+#ff0000 do 
+#ff5600 ka
+#ffaa00 re
+#80aa00 ni
+#00aa00 mo
+#00aa80 fa
+#00aaff ze
+#0056ff si
+#0000ff po
+#8000ff la
+#ff00ff ve
+#ff0080 ti
+#ff0000 do
+```
+
+A second way is switching values simulaneously:
+```
+#ffaa00 
+    / downgrade values
+#aa5600 
+    / switch 
+#56aa00 
+    / upgrade values
+#aaff00 
+    / hop
+#00ffaa 
+    / downgrade values
+#00aa56
+    / switch 
+#0056aa
+    / upgrade values
+#00aaff
+    / hop
+#aa00ff
+    / downgrade values
+#5600aa
+    / switch 
+#aa0056
+    / upgrade values
+#ff00aa
+    / hop
+#ffaa00
+```
+
+Or what if we split in four levels `00-40-80-bf-ff` but ff drops while 00 rise?
+```
+#ff0000 (red)
+#bf4000
+#808000
+#40bf00
+#00ff00 (green)
+#00bf40
+#008080
+#0040bf
+#0000ff (blue)
+#4000bf
+#800080
+#bf0040
+#ff0000
+```
+
+What if we adjust the power of green and red?
+What if we want to lower the power of green? `00-40-80` in general
+```
+#ff0000
+#ff4000
+#ff8000
+#808000
+#008000
+#008080
+#0080ff
+#0040ff
+#0000ff
+#8000ff
+#ff00ff
+#ff0080
+#ff0000
+```
+
+What if we added all three colors at some points. To make it asymmetric:
+`00-40-80-bf-ff` or `00-55-aa-ff`
+```
+#ffbf80
+#bf8040
+#804000
+#008040
+#40bf80
+#80ffbf
+#bf80ff
+#8040bf
+#400080
+
+#804000
+#008040
+#400080
+#408000
+```
+
+
+Combine colors in 3 levels? (`3*3*3=27` - 3 neutral = 24)
+```
+#000000 (000)
+#000080 (001)
+#0000ff (002)
+#008000 (010)
+#008080 (011)
+#0080ff (012)
+#00ff00 (020)
+#00ff80 (021)
+#00ffff (022)
+#800000 (100)
+#800080 (101)
+#8000ff (102)
+#808000 (110)
+#808080 (111)
+#8080ff (112)
+#80ff00 (120)
+#80ff80 (121)
+#80ffff (122)
+#ff0000 (200)
+#ff0080 (201)
+#ff00ff (202)
+#ff8000 (210)
+#ff8080 (211)
+#ff80ff (212)
+#ffff00 (220)
+#ffff80 (221)
+#ffffff (222)
+
+
+there are three digits. A is the initial ace. L is the lucky zero (it's left or right/direction will be fixed). U is the unlucky 0.
+* increase A & L
+* increase U & L
+* decrase U & A
+* decrase L & A
+
+001,012,122,021, 010,120,221,210, 100,201,212,102
+001,102,212,201, 100,210,221,120, 010,021,122,012
+
+#800000 (100) (red)
+#ff8000 (210)
+#ffff80 (221) 
+#80ff00 (120)
+#008000 (010) (green)
+#00ff80 (021)
+#80ffff (122)
+#0080ff (012)
+#000080 (001) (blue)
+#8000ff (102)
+#ff80ff (212)
+#ff0080 (201)
+```
+> this is one of the most complex but also one of my favourites
+
+Combine colors in 4 levels? (`4*4*4=64` choices - 4 neutrals)
+```
+#ffaa55 (321)
+#ff55aa (312)
+#aaff55 (231)
+#aa55ff (213)
+#55aaff (123)
+#55ffaa (132)
+
+#ff5555 (311)
+#55ff55 (131)
+#5555ff (113)
+
+#ffaaaa (322)
+#aaffaa (232)
+#aaaaff (223)
+
+#aa5500 (210)
+#aa0055 (201)
+#55aa00 (120)
+#5500aa (102)
+#0055aa (012)
+#00aa55 (021)
+```
+
+Combining three colors?
+```
+#ff8000
+#ff0080
+#00ff80
+#80ff00
+#0080ff
+#8000ff
+
+#ff8080
+#80ff80
+#8080ff
+
+#ff0000
+#ffff00
+#00ff00
+#00ffff
+#0000ff
+#ff00ff
+```
+
+
+
+
+We could also use the [natural color system](https://en.wikipedia.org/wiki/Natural_Color_System) (which uses four colors) and the three version/intonations/saturations (deeper, mid, light), to name all notes:
+* Green (#009F6B)
+* Red (#C40233)
+* Yellow (#FFD300)
+* Blue (#0087BD)
+Essentially, it's a RYGB circle. It's propriatery, so not really open and usable. 
+
+
+[Color charts](https://en.wikipedia.org/wiki/Color_chart)
+
+* this [site](https://www.greenleafblueberry.com/blogs/news/modern-primary-colors) has a lovely picture, where the greens are more easily seperable.
